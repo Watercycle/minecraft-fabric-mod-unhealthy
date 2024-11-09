@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "unhealthy",
+	"version": "${version}",
+	"name": "Unhealthy",
+	"description": "Being unhealthy!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/unhealthy/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.unhealthy.UnhealthyMod"
+		],
+		"client": [
+			"com.unhealthy.UnhealthyModClient"
+		]
+	},
+	"mixins": [
+		"unhealthy.mixins.json",
+		{
+			"config": "unhealthy.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
